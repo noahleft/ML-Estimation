@@ -2,8 +2,7 @@
 
 import random
 from math import sin
-func = lambda x: 5*sin(x/2)
-#func = lambda x: (x**3-2*x**2+5*x+1)/10
+from config import func
 
 def createData(x_min,x_max,noise_range,num):
   retArray = []
