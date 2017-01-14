@@ -1,11 +1,11 @@
 #!/usr/local/bin/python3
 from matplotlib import pyplot
-from read_data import read_data
+from data.read_data import read_data
 
 data = read_data()
 
-from config import x_min,x_max
-from config import func
+from data.config import x_min,x_max
+from data.config import func
 import numpy as np
 t = np.arange(x_min,x_max,0.01)
 s = list(map(func,t))
@@ -21,4 +21,6 @@ pyplot.ylabel('target (t)')
 pyplot.grid(True)
 
 pyplot.show()
+
+
 

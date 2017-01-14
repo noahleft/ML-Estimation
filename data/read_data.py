@@ -7,3 +7,15 @@ def read_data():
     data = db['data']
   return data
 
+from data.config import x_min,x_max
+from data.config import func
+import numpy as np
+def get_plot_data():
+  t = np.arange(x_min,x_max,0.01)
+  return t
+
+def get_train_data():
+  t = np.arange(x_min,x_max,0.01)
+  s = list(map(func,t))
+  return (t,s)
+
