@@ -12,13 +12,14 @@ from sklearn import linear_model
 reg = linear_model.LinearRegression()
 reg.fit(x,y)
 
-from data.plot_function import plot,show
+from data.plot_function import plot,show,setTitle
 predict_result = reg.predict(x)
 plot_x = list(map(lambda z: [z],plot_data))
 plot_predict_function = reg.predict(plot_x)
 
-plot(x,y,'ro')
+setTitle('1st order linear model')
+plot(x,y,'ro','raw data')
 #plot(x,predict_result,'bo')
-plot(plot_x,plot_predict_function,'b')
+plot(plot_x,plot_predict_function,'black','linear model prediction')
 show()
 

@@ -15,14 +15,17 @@ poly_X = poly.fit_transform(x)
 reg = linear_model.LinearRegression()
 reg.fit(poly_X,y)
 
-from data.plot_function import plot,show
+from data.plot_function import plot,show,setTitle
 predict_result = reg.predict(poly_X)
 plot_x = list(map(lambda z: [z],plot_data))
 poly_plot_X = poly.fit_transform(plot_x)
 plot_predict_function = reg.predict(poly_plot_X)
+setTitle('5st order polynomial model')
 
-plot(x,y,'ro')
+plot(x,y,'ro','raw data')
 #plot(x,predict_result,'bo')
-plot(plot_x,plot_predict_function,'b')
+plot(plot_x,plot_predict_function,'black','polynomial model prediction (5 orders)')
 show()
+
+
 
