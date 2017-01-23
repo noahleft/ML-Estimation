@@ -1,5 +1,4 @@
 #!/usr/local/bin/python3
-
 from data.read_data import read_data,get_plot_data,get_train_data
 data = read_data()
 plot_data = get_plot_data()
@@ -25,7 +24,15 @@ setTitle('5st order polynomial model')
 plot(x,y,'ro','raw data')
 #plot(x,predict_result,'bo')
 plot(plot_x,plot_predict_function,'black','polynomial model prediction (5 orders)')
+#show()
+
+
+from data.config import x_min,x_max
+from data.config import func
+import numpy as np
+t = np.arange(x_min,x_max,0.01)
+s = list(map(func,t))
+actual = plot(t,s,'b' ,'actual')
+
+
 show()
-
-
-
