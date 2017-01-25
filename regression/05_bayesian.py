@@ -20,7 +20,7 @@ predict_result = reg.predict(poly_X)
 plot_x = list(map(lambda z: [z],plot_data))
 poly_plot_X = poly.fit_transform(plot_x)
 plot_predict_function = reg.predict(poly_plot_X)
-setTitle('5st order polynomial model')
+setTitle('5st order polynomial model (Bayesian Ridge)')
 
 plot(x,y,'ro','raw data')
 #plot(x,predict_result,'bo')

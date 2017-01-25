@@ -9,6 +9,7 @@ def show():
   pyplot.ylabel('target (t)')
   pyplot.legend(loc='upper left')
   pyplot.grid(True)
+  pyplot.ylim( (-10,10) )
   pyplot.show()
 
 def setTitle(title):
